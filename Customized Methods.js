@@ -79,30 +79,14 @@ console.log([1, 2, 3, 4, 5].myEvery(everyCallback))
 
 const sortCallback = (element, index, array) => {
   //code to be executed
-  if (a < b) {
-    return -1;
-  }
-  if (a > b) {
-    return 1;
-  }
-  return 0;
 };
 function mySort(sortCallback) {
-  let result;
-  const arrLength = this.length;
-  for (let i = 0; i < arrLength; i++) {
-    if (this.hasOwnProperty(i)) {
-      result = sortCallback(this[i], i , this)
-    }
-  }
-  return result;
+  
 }
 
 //----------------------flat-----------------------
 
 const flattenedArray = [];
 function myFlat(myArray, depth) {
-    for (let i = 0; i < myArray.length; i++) {
-        flattenedArray.push(...myArray[i])
-    }
+    
 }
