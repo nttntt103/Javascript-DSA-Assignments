@@ -56,16 +56,17 @@ console.log(promisesArr)
 function myPromise() {
     const myPromise = new Promise((resolve, reject) => {
         for (let i = 1; i < 6; i++) {
-            if (parseInt(Math.random() * 100) % 2 === 0) {
-                resolve(randomNum);
-                break;
-            } else {
-                reject(new Error('This is not even number. Try again!'))
-                if (i === 5) {
-                    break;
-                }
-            }
+            let randomNum = parseInt(Math.random() * 100);
+            if (randomNum % 2 === 0) {
+                return resolve(randomNum);
+            } 
         }
+        return reject(`Can not get even number. Try again later!`);
     })
     return myPromise;
 }
+myPromise().then((value) => {
+    console.log(value)
+}).catch((err) => {
+    console.log(err)
+})
