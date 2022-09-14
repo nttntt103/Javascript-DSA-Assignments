@@ -51,10 +51,21 @@ const keywordsArr = ['swift', 'rust', 'javascript', 'react', 'rx', 'ruby', 'rail
 const promisesArr = keywordsArr.map(keyword => fetch(`https://api.github.com/search/repositories?q=${keyword}`))
 console.log(promisesArr)
 
-Promise.any(promisesArr)
-    .then(() => {})
-    .catch((err) => {
-        console.log(err)
+//-------------------------3------------------------------
+
+function myPromise() {
+    const myPromise = new Promise((resolve, reject) => {
+        for (let i = 1; i < 6; i++) {
+            if (parseInt(Math.random() * 100) % 2 === 0) {
+                resolve(randomNum);
+                break;
+            } else {
+                reject(new Error('This is not even number. Try again!'))
+                if (i === 5) {
+                    break;
+                }
+            }
+        }
     })
-
-
+    return myPromise;
+}
