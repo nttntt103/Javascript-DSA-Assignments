@@ -5,9 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        html {
+            height: 1000vh;
+        }
+        
+        .container {
+            position: fixed;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello world</h1>
-    <script src="./Promise.js"></script>
+    <div class="container">
+        <h1>Hello World</h1>
+        <input type="text" name="search" id="searchBar" placeholder="Search...">
+        <h3>Scroll times (without Throttle): <span id="normalScroll"></span></h3>
+        <h3 class="red">Scroll times (with Throttle): <span id="throttleScroll"></span></h3>
+        <h3>Text (without Debounce): <span id="normalText"></span></h3>
+        <h3 class="red">Text (with Debounce): <span id="debounceText"></span></h3>
+    </div>
+    <script src="./Debounce + Throttle.js"></script>
 </body>
 </html>
