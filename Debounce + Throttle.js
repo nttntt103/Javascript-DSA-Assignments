@@ -1,6 +1,7 @@
 //----------------------Debounce------------------
 
-const debounce = (fn, delay = 0) => {
+const debounce = (fn, delay) => {
+    delay = delay || 0;
     let timeId;
     return () => {
         clearTimeout(timeId)
