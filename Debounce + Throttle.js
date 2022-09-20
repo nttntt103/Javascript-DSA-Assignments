@@ -19,10 +19,11 @@ const throttle = (fn, delay) => {
     let lastTime = 0;
     return () => {
         const currentTime = new Date().getTime();
-        if (currentTime - lastTime >= delay) {
-            lastTime = currentTime;
-            fn();
+        if (currentTime - lastTime < delay) {
+            return;
         }
+        lastTime = currentTime;
+        fn();
     }
 }
 
