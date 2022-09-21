@@ -28,8 +28,8 @@ const throttle = (fn, delay) => {
         if (currentTime - lastTime < delay) {
             return;
         }
-        lastTime = currentTime;
         fn();
+        lastTime = currentTime;
     }
 }
 
