@@ -1,3 +1,9 @@
+// Throttle giới hạn số lần gọi hàm trong một khoảng thời gian. Ví dụ khi một hàm dùng throttle, throttle sẽ gọi hàm này nhiều nhất 1 lần mỗi x mili giây 
+// với x là khoảng thời gian mà ta cài đặt.
+
+// Không giống như Throttle, Debounce sẽ giữ trigger rate của event listener là 0 kể cả khi event được thực hiện. Và sau một khoảng thời gian mà event 
+// không được thực hiện, event listener mới được trigger và hàm được gọi.
+
 //----------------------Debounce------------------
 
 const debounce = (fn, delay) => {
